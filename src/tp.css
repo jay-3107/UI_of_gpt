@@ -1,0 +1,94 @@
+body {
+    font-family: 'Noto Sans Devanagari', sans-serif;
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Adding a slight glass effect */
+.app-container {
+    width: 90%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.9);  /* Slight transparency */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    text-align: center;
+    backdrop-filter: blur(10px); /* Glass effect */
+}
+
+/* Adding a softer chat box */
+.chat-box {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.7); /* Light opacity */
+}
+
+/* User message styling */
+.user-msg {
+    text-align: right;
+    color: #007bff;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+/* Bot message styling */
+.bot-msg {
+    text-align: left;
+    color: #333;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+/* Input box with soft shadow */
+.input-box {
+    width: 90%;
+    height: 80px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Modern Button */
+.translate-btn {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.translate-btn:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+}
+
+/* Animated loading spinner */
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #007bff;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
