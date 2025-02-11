@@ -21,12 +21,10 @@ const App = () => {
     try {
       await new Promise((resolve) => setTimeout(resolve, 1500)); // Add delay to prevent rate limit
 
-      // 🔹 Call your deployed backend on Render
-      const response = await axios.post(
-        "https://sanskrit-translate-backend.onrender.com/translate",
-        { text: inputText },
-        { headers: { "Content-Type": "application/json" } }
-      );
+      // 🔹 Call your Node.js backend instead of Google API directly
+      const response = await axios.post("http://localhost:5000/translate", {
+        text: inputText
+      });
 
       const translatedText = response.data.translation || "Translation error";
       setMessages((prevMessages) => [...prevMessages, { text: translatedText, type: "bot" }]);
