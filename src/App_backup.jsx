@@ -6,7 +6,7 @@ import axios from "axios";
 import { motion } from "framer-motion";
 import "./styles.css";
 
-const API_KEY = "AIzaSyCdH3aDzd12nL4N4_aagzm5wlyVphMTQWw";
+const API_KEY = "";
 
 const App = () => {
   const [messages, setMessages] = useState([]);
